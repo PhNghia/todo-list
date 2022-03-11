@@ -163,6 +163,7 @@ html {
 
 .todo-total-item {
     font-size: 18px;
+    text-transform: capitalize;
 }
 
 .todo-category {
@@ -210,14 +211,14 @@ html {
     }
 
     .todo-total-item {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .todo-category li {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .todo-clear-completed {
-        font-size: 12px;
+        font-size: 11px;
     }
 }

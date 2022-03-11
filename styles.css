@@ -1,0 +1,223 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family:Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    max-height: 900px;
+    max-width: 900px;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 80px;
+    font-weight: initial;
+    color: rgb(235, 151, 151);
+    text-transform: capitalize;
+}
+
+.todo-form {
+    margin: 0 40px;
+    min-width: 600px;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.todo-heading {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.todo-heading input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 26px;
+    padding: 15px 10px 15px 20px;
+    min-width: 100px;
+    color: #555;
+}
+
+.todo-heading input::placeholder {
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: initial;
+    color: #f1f1f1;
+}
+
+.todo-heading input::-ms-input-placeholder {
+    color: #f1f1f1;
+    font-style: italic;
+    font-weight: initial;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo-add-button {
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(241, 89, 89);
+}
+
+.todo-list {
+    border-spacing: 0;
+    border-top: 3px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.todo-list::-webkit-scrollbar {
+    width: 5px;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.todo-list::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item.completed .todo-item-checked {
+    color: green;
+}
+
+.todo-item.completed .todo-item-content {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.todo-item-checked {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
+    color: transparent;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.todo-item-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: #555;
+    width: 100%;
+    min-height: 50px;
+    padding: 0px 20px;
+    font-size: 24px;
+    user-select: text;
+}
+
+.todo-item-remove {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 22px;
+    color: #555;
+    margin-right: 12px;
+}
+
+.todo-resume.no-item {
+    display: none;
+}
+
+.todo-resume {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    min-height: 30px;
+    padding: 10px;
+}
+
+.todo-total-item {
+    font-size: 18px;
+}
+
+.todo-category {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.todo-category li {
+    padding: 0 5px;
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.todo-clear-completed {
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 739px) {
+    .todo-form {
+        min-width: 500px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .container {
+        margin-top: 20px;
+    }
+
+    .todo-form {
+        min-width: 310px;
+    }
+
+    .todo-heading input {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .todo-item-content {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .todo-total-item {
+        font-size: 12px;
+    }
+
+    .todo-category li {
+        font-size: 12px;
+    }
+
+    .todo-clear-completed {
+        font-size: 12px;
+    }
+}

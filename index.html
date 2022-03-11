@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>todos</h1>
+        <div class="todo-form">
+            <div class="todo-heading">
+                <input type="text" placeholder="What needs to be done?">
+                <button class="todo-add-button">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <div class="todo-list">
+                <!-- <article class="todo-item">
+                    <div class="todo-item-checked">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <p class="todo-item-content">Today is old day of next day</p>
+                    <button class="todo-item-remove">
+                        <i class="fa-solid fa-xmark todo-item-remove-icon"></i>
+                    </button>
+                </article> -->
+            </div>
+            <div class="todo-resume no-item">
+                <p class="todo-total-item">
+                    <span></span>
+                    items left
+                </p>
+                <ul class="todo-category">
+                    <li>all</li>
+                    <li>active</li>
+                    <li>completed</li>
+                </ul>
+                <span class="todo-clear-completed">clear completed</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
